@@ -1,0 +1,175 @@
+html{
+    height:100%;
+}
+
+
+body{
+    height: 90%;
+    background:linear-gradient(#55ccd4,#c7dac7,#f7af8a,#fe8d7b,#fe6786);
+}
+
+.flexbox{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+}
+
+.mybox{
+    border:10px solid #40989e;
+    border-radius:7px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background:#55ccd4;
+    color:#204c50;
+    text-align: center;
+}
+
+#welcomeboard{
+    opacity:1;
+    height:70%;
+}
+
+.welcomeboard-transition{
+    animation: revealBoard 2.5s linear;
+    animation-fill-mode: forwards;
+}
+
+#gameboard{
+    min-height: 60%;
+    min-width: 35%;
+    padding:10px;
+}
+
+
+#playboard{
+    height:70%;
+}
+
+#notif{
+    min-width: 20%;
+    min-height: 5%;
+    margin-top: -30px;
+    padding:3px;
+    opacity:0;
+}
+
+.nextbutton{
+    opacity:1;
+    background-color:#55ccd4;
+    border:4px solid #204c50;
+    border-radius: 6px;
+    padding:10px;
+    width:250px;    
+    font-size:large;
+    text-decoration:none;
+    color:rgb(56, 56, 56);
+}
+
+.nextbutton:hover{
+    background-color:#48b2b9;
+}
+
+.nextbutton::after{
+    content:"!!هــــــــيّا";
+}
+
+.nextbutton-transition{
+    animation: revealButton 20s linear;
+    animation-fill-mode: forwards;
+}
+
+#guess{
+    background-color:#e7f5e7;
+    border:4px solid #40989e;
+    border-radius: 6px;
+    padding:15px 22px;
+    width:340px;    
+    font-size:1.2rem;
+    text-decoration:none;
+    color:#40989e;
+    direction:RTL;
+}
+
+input:focus,button:focus{
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@keyframes titleEffect{
+    0%{
+        content:"!!!عالســــلامــة";
+        color:#204c50;
+        
+    }
+    10%{
+        color:#55ccd4;
+    }
+    20%{
+        content:"!!!باش نلعبوا لعبة صغيرة";
+        color:#204c50;
+    }
+    30%{
+        color:#55ccd4;
+    }
+    40%{
+        content:"أنا باش نخمم في عدد ما بين 1 و 100";
+        color:#204c50;
+    }
+    50%{
+        color:#55ccd4;
+    }
+    60%{
+        content:"و انت يلزمك اطّلعوا";
+        color:#204c50;
+    }
+    70%{
+        color:#55ccd4;
+    }
+    80%{
+        content:"!!!أما في عشرة محاولات برك";
+        color:#204c50;
+    }
+    90%{
+        color:#55ccd4;
+    }
+}
+
+.title::after{
+    content:"!!نبداو؟";
+    animation: titleEffect 20s linear;
+    color:#204c50;
+}
+
+@keyframes revealButton {
+    0%{
+      opacity:0;
+    }
+    90%{
+        opacity:0.01;
+    }
+}
+
+@keyframes revealBoard{
+    0%{
+        opacity:0%;
+    }
+    50%{
+        opacity: 50%;
+    }
+    100%{
+        opacity:100%;
+    }
+}
+
+.display-none{
+    display:none;
+}
+
+.again::after{
+    content:'🤔🤔 تحب تعاود'
+}

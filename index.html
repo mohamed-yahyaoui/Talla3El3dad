@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Séance1</title>
+</head>
+<body class="flexbox">
+    <div id="notif" class="flexbox mybox">
+        <h3>a</h3>
+    </div>
+    <br/>
+    <div id="gameboard" class="flexbox mybox">
+        <div id="welcomeboard" class="flexbox">
+            <h1 class="title"></h1>
+            <br/>
+            <button class="nextbutton nextbutton-transition" onclick="next(true)"></button>
+            <br/>
+        </div>
+        <div id='playboard' class="flexbox display-none">
+            <h1 id="counter"></h1>
+            <br/>
+            <input type="number" id="guess" value="" placeholder="اختار عدد بين 1 و 100">
+            <br/>
+        </div>
+    </div>
+</body>
+<script src="./app.js"></script>
+</html>
