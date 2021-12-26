@@ -6,6 +6,10 @@ html{
 body{
     height: 90%;
     background:linear-gradient(#55ccd4,#c7dac7,#f7af8a,#fe8d7b,#fe6786);
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
 }
 
 .flexbox{
@@ -16,6 +20,11 @@ body{
 }
 
 .mybox{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+
     border:10px solid #40989e;
     border-radius:7px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -40,7 +49,6 @@ body{
     padding:10px;
 }
 
-
 #playboard{
     height:70%;
 }
@@ -49,11 +57,13 @@ body{
     min-width: 20%;
     min-height: 5%;
     margin-top: -30px;
-    padding:3px;
+    padding:20px;
     opacity:0;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.nextbutton{
+.playbutton{
     opacity:1;
     background-color:#55ccd4;
     border:4px solid #204c50;
@@ -65,17 +75,12 @@ body{
     color:rgb(56, 56, 56);
 }
 
-.nextbutton:hover{
+.playbutton:hover{
     background-color:#48b2b9;
 }
 
-.nextbutton::after{
+.playbutton::after{
     content:"!!هــــــــيّا";
-}
-
-.nextbutton-transition{
-    animation: revealButton 20s linear;
-    animation-fill-mode: forwards;
 }
 
 #guess{
@@ -96,8 +101,13 @@ input:focus,button:focus{
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.playbutton-transition{
+    animation: revealButton 20s linear;
+    animation-fill-mode: forwards;
 }
 
 @keyframes titleEffect{
@@ -139,7 +149,7 @@ input::-webkit-inner-spin-button {
     }
 }
 
-.title::after{
+.title-transition::after{
     content:"!!نبداو؟";
     animation: titleEffect 20s linear;
     color:#204c50;
@@ -166,10 +176,6 @@ input::-webkit-inner-spin-button {
     }
 }
 
-.display-none{
+.cache{
     display:none;
-}
-
-.again::after{
-    content:'🤔🤔 تحب تعاود'
 }
